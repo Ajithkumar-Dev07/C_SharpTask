@@ -1,0 +1,152 @@
+﻿1. Password Strength Analyzer
+Requirements
+Create a program to analyze a password.
+The program should:
+1.	Accept a password. 
+2.	Check whether it contains: 
+    o	At least one uppercase letter 
+    o	At least one lowercase letter 
+    o	At least one digit 
+    o	At least one special character 
+3.	Check password length. 
+4.	Display the strength: 
+    o	Weak 
+    o	Medium 
+    o	Strong 
+5.	Display which requirements are missing. 
+6.	Use String methods such as Contains(), Any(), Length, etc. 
+Sample Input
+Enter Password: Hello123
+Sample Output
+Password Length: 8
+Uppercase: Yes
+Lowercase: Yes
+Digit: Yes
+Special Character: No
+
+Strength: Medium
+Missing Requirement: Special Character
+---------------------------------------------------------------------------------------------------------------------------
+2. Text Report Generator
+Requirements
+Create a program that generates an employee report using StringBuilder.
+Accept:
+    •	Employee ID 
+    •	Employee Name 
+    •	Department 
+    •	Salary 
+    •	City 
+The program should:
+    1.	Build the complete report using StringBuilder. 
+    2.	Add a heading. 
+    3.	Format employee details line by line. 
+    4.	Calculate annual salary. 
+    5.	Display the final report. 
+    6.	Do not use multiple Console.WriteLine() statements for constructing the report. 
+
+Sample Input
+Employee ID: 101
+Employee Name: Arun Kumar
+Department: IT
+Salary: 45000
+City: Chennai
+
+
+Sample Output
+================================
+       EMPLOYEE REPORT
+================================
+Employee ID   : 101
+Employee Name : Arun Kumar
+Department    : IT
+Monthly Salary: 45000
+Annual Salary : 540000
+City          : Chennai
+================================
+
+------------------------------------------------------------------------------------------------------------
+3. Log Message Formatter
+Requirements
+Create a program that formats a log message.
+Input format:
+Date | Level | Message
+The program should:
+    1.	Split the input into separate values. 
+    2.	Remove unnecessary spaces. 
+    3.	Convert the log level to uppercase. 
+    4.	Create a formatted log using StringBuilder. 
+    5.	Add a log number. 
+    6.	Display the formatted message. 
+Sample Input
+101 | error | database connection failed
+
+Sample Output
+Log ID      : 101
+Log Level   : ERROR
+Log Message : Database connection failed
+Status      : Critical
+------------------------------------------------------------------------------------------------------
+
+Invoice Generator Using StringBuilder
+Requirements
+
+Create an invoice generator.
+
+Accept details for 3 products:
+
+Product Name
+Quantity
+Price
+
+The program should:
+
+Calculate the amount for each product.
+Calculate subtotal.
+Calculate 18% GST.
+Calculate final amount.
+Generate the invoice using StringBuilder.
+Display the invoice in a properly formatted structure.
+Sample Input
+Product 1: Laptop
+Quantity: 1
+Price: 50000
+
+Product 2: Mouse
+Quantity: 2
+Price: 500
+
+Product 3: Keyboard
+Quantity: 1
+Price: 1500
+Sample Output
+========================================
+              INVOICE
+========================================
+Product       Qty       Price      Amount
+----------------------------------------
+Laptop         1        50000      50000
+Mouse          2          500        1000
+Keyboard       1         1500        1500
+----------------------------------------
+Subtotal:                         52500
+GST 18%:                           9450
+----------------------------------------
+Grand Total:                      61950
+========================================
+Skills Covered
+String.Length
+Trim()
+ToUpper()
+ToLower()
+Replace()
+Split()
+Contains()
+Substring()
+Character checking
+StringBuilder.Append()
+AppendLine()
+Insert()
+Remove()
+Replace()
+String formatting
+Real-time text/report generation
