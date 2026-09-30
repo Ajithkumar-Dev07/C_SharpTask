@@ -1,0 +1,103 @@
+﻿Task 2: Employee Management Using List<T>
+Objective
+
+Create a console-based Employee Management System using a custom Employee class and List<Employee>.
+
+Employee Class
+
+Create an Employee class with:
+
+EmployeeId
+EmployeeName
+Age
+Salary
+Department
+Role
+Requirements
+
+Create a List<Employee> and add at least 8 employee objects.
+
+Implement the following operations:
+
+1. Insert
+
+Add a new employee to the list.
+
+Enter Employee ID: 109
+Enter Name: Karthik
+Enter Age: 28
+Enter Salary: 45000
+Enter Department: IT
+Enter Role: Developer
+
+Employee added successfully.
+2. Display
+
+Display all employees in a formatted table.
+
+ID    Name       Age    Salary    Department    Role
+101   Arun       25     35000     IT            Developer
+102   Priya      28     45000     HR            Manager
+103   Kumar      30     55000     IT            Senior Developer
+3. Search
+
+Search an employee by Employee ID or Employee Name.
+
+Enter Employee ID: 103
+
+Employee Found:
+Name: Kumar
+Age: 30
+Salary: 55000
+Department: IT
+Role: Senior Developer
+4. Filter
+
+Filter employees based on different conditions:
+
+Employees from IT department
+Employees with salary greater than 50000
+Employees whose age is greater than 25
+
+Example:
+
+IT Employees:
+
+101 - Arun - 35000
+103 - Kumar - 55000
+106 - Suresh - 65000
+5. Sort
+
+Provide options to sort employees by:
+
+Name ascending
+Salary ascending
+Salary descending
+Age ascending
+
+Example:
+
+Employees sorted by Salary Descending:
+
+Suresh    65000
+Kumar     55000
+Priya     45000
+Arun      35000
+6. Delete
+
+Delete an employee using EmployeeId.
+
+Enter Employee ID to delete: 104
+
+Employee deleted successfully.
+
+If the employee doesn't exist:
+
+Employee not found.
+7. Count
+
+Display:
+
+Total Employees: 8
+IT Employees: 4
+Employees with Salary > 50000: 3

@@ -1,0 +1,79 @@
+﻿Objective
+
+Create a C# console application to demonstrate the usage of common Generic Collections using simple value types such as int, string, and double.
+
+Requirements
+
+Use the following collections:
+
+List<int>
+Store 5 employee ID numbers.
+Add and display the IDs.
+Remove one ID.
+
+Dictionary<int, string>
+Store Employee ID as the key and Employee Name as the value.
+Add 5 employees and display them.
+
+HashSet<string>
+Store department names.
+Add duplicate department names and observe that duplicates are not stored.
+Display all unique departments.
+
+Queue<string>
+Store customer names waiting for service.
+Add 4 customers.
+Process customers using Dequeue().
+
+Stack<string>
+Store recently opened page names.
+Add 4 pages.
+Remove the last opened page using Pop().
+
+SortedList<int, double>
+Store Employee ID and Salary.
+Display the records in sorted order based on Employee ID.
+
+Sample Output
+--- List<int> ---
+101
+102
+103
+104
+105
+
+After removing 103:
+101
+102
+104
+105
+
+--- Dictionary<int, string> ---
+101 - Arun
+102 - Priya
+103 - Kumar
+104 - Divya
+105 - Rahul
+
+--- HashSet<string> ---
+IT
+HR
+Finance
+Sales
+
+--- Queue<string> ---
+Processing: Arun
+Processing: Priya
+Processing: Kumar
+Processing: Divya
+
+--- Stack<string> ---
+Current Page: Dashboard
+Previous Page: Employee List
+
+--- SortedList<int, double> ---
+101 - 35000
+102 - 40000
+103 - 45000
+
+Concepts covered: List<T>, Dictionary<TKey,TValue>, HashSet<T>, Queue<T>, Stack<T>, and SortedList<TKey,TValue>.

@@ -1,0 +1,67 @@
+﻿Task 1: Password Validation – Custom Exception
+
+Scenario: Create a user registration program that validates a password using a custom exception.
+
+Requirements
+Create InvalidPasswordException inheriting from Exception.
+Get a password from the user.
+Password must:
+	Have minimum 6 characters
+	Contain at least 1 uppercase
+	Contain at least 1 lowercase
+	Contain at least 1 digit
+	Contain at least 1 special character
+	Not contain spaces
+
+Throw the custom exception if any rule fails.
+Handle the exception using try-catch.
+Display a success message when the password is valid.
+
+Sample Input
+Enter Password: Welcome@123
+
+Sample Output
+Password is valid.
+
+Registration completed successfully.
+Invalid Input
+Enter Password: welcome123
+
+Output
+Password must contain at least one uppercase character.
+
+---------------------------------------------------------------------------------------------------
+
+Task 2: Bank Withdrawal – Custom Exception
+
+Scenario: Create a banking application that prevents withdrawal when the account has insufficient balance.
+
+Requirements
+	Create a BankAccount class with AccountNumber, AccountHolderName, and Balance.
+	Create InsufficientBalanceException inheriting from Exception.
+	Create a Withdraw() method.
+	Get the withdrawal amount from the user.
+	Withdrawal amount must be greater than 0.
+	If withdrawal amount is greater than the balance, throw the custom exception.
+	Handle the exception using try-catch.
+	Display the remaining balance after successful withdrawal.
+
+Sample Input
+Account Holder: Ajith
+Balance: 25000
+Enter Withdrawal Amount: 5000
+
+Sample Output
+Withdrawal successful.
+Remaining Balance: 20000
+
+Invalid Input
+Account Holder: Ajith
+Balance: 25000
+Enter Withdrawal Amount: 30000
+
+Output
+Transaction Failed.
+Insufficient balance.
+Available Balance: 25000
+Requested Amount: 30000
