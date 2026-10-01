@@ -1,0 +1,76 @@
+﻿Task: Restaurant Food Ordering System
+Scenario
+Create a C# Console Application that simulates a restaurant where a waiter handles multiple customers.
+The waiter should not wait for the kitchen to finish preparing one customer's food. Instead:
+1. Customer places an order.
+2. Waiter accepts the order.
+3. Waiter sends the order to the kitchen.
+4. Kitchen prepares the food asynchronously.
+5. While the kitchen is preparing the food, the waiter can take orders from other customers.
+6. Once the food is ready, the waiter receives it and serves the respective customer.
+
+Requirements
+Create the following methods:
+TakeOrder()
+SendToKitchen()
+PrepareFoodAsync()
+ServeFood()
+
+Use:
+- Task
+- async
+- await
+- Task.Delay()
+Example Flow
+Customer 1: Orders Biryani
+Waiter: Took order from Customer 1
+Waiter: Sent Biryani order to kitchen
+
+Customer 2: Orders Fried Rice
+Waiter: Took order from Customer 2
+Waiter: Sent Fried Rice order to kitchen
+
+Customer 3: Orders Pizza
+Waiter: Took order from Customer 3
+Waiter: Sent Pizza order to kitchen
+
+Kitchen: Biryani preparation started...
+Kitchen: Fried Rice preparation started...
+Kitchen: Pizza preparation started...
+
+Kitchen: Biryani is ready
+Waiter: Serving Biryani to Customer 1
+
+Kitchen: Pizza is ready
+Waiter: Serving Pizza to Customer 3
+
+Kitchen: Fried Rice is ready
+Waiter: Serving Fried Rice to Customer 2
+
+Important Challenge
+The students should not write the program sequentially like this:
+PrepareFood();
+ServeFood();
+
+PrepareFood();
+ServeFood();
+
+Instead, they should create Tasks for each order, allowing the waiter to continue handling other customers while the kitchen works.
+Expected Learning
+Students should understand:
+Task represents an asynchronous operation that may complete in the future.
+
+In this example:
+Waiter = Main program
+Kitchen = Asynchronous Task
+Food preparation = Long-running operation
+Task.Delay() = Simulated kitchen preparation time
+await = Wait asynchronously for the task without blocking the thread
+
+⭐ Intermediate Challenge
+Ask students to modify the application so that:
+- Customer 1 → Biryani → 5 seconds
+- Customer 2 → Fried Rice → 3 seconds
+- Customer 3 → Pizza → 7 seconds
+- Customer 4 → Burger → 2 seconds
+The program should demonstrate that the waiter continues taking orders while all food preparation happens asynchronously.
