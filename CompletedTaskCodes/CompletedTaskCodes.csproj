@@ -57,6 +57,7 @@
   <ItemGroup>
     <Content Include="C# Task Requirements\EmployeeMangement.txt" />
     <Content Include="C# Task Requirements\GenericCollection.txt" />
+    <Content Include="C# Task Requirements\usingTask.txt" />
     <Content Include="String and StringBuilder Task.txt" />
     <Content Include="Exception Task.txt" />
   </ItemGroup>

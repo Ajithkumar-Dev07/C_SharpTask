@@ -1,0 +1,67 @@
+﻿Objective
+Develop a Bus Booking Console Application using C# that allows users to search for buses, check seat availability, book tickets, and view/update passenger information.
+An Admin should be able to manage bus information using CRUD operations.
+
+Restrictions:  
+- C# Console Application only
+- No database
+- No ASP.NET / ASP.NET Core
+- Use in-memory collections such as List<T>, Dictionary<TKey,TValue>, etc.
+- Apply OOP concepts and proper exception handling.
+
+1. Bus Details
+Each bus should contain the following information:
+Field	          Description
+BusId	          Unique bus ID
+BusName	          Name of the bus
+StartingPoint	  Starting location
+EndingPoint	      Destination
+TotalSeats	      Total number of seats
+AvailableSeats	  Currently available seats
+Timing	          Bus departure time
+
+Example
+Bus ID       : 101
+Bus Name     : TNSTC Express
+Starting     : Nagercoil
+Destination  : Chennai
+Total Seats  : 40
+Available    : 40
+Timing       : 08:30 PM
+------------------------------------------------------------------------------
+
+2. Passenger Details
+Each passenger should contain:
+Field	              Description
+PassengerId	       Automatically generated incremental ID
+PassengerName	   Passenger name
+PhoneNo	Passenger  phone number
+Age	               Passenger age
+City	           Passenger's city
+
+Example:
+Passenger ID : 1001
+Name         : Arun Kumar
+Phone        : 9876543210
+Age          : 25
+City         : Nagercoil
+
+3. Main Menu
+When the application starts, display a menu similar to:
+========================================
+       BUS BOOKING SYSTEM
+========================================
+
+1. View Bus Details
+2. Search Bus
+3. Check Seat Availability
+4. Book Ticket
+5. View Passenger Details
+6. Update Passenger Details
+7. Cancel Ticket
+8. Admin
+9. Exit
+
+Enter your choice: 
+
+

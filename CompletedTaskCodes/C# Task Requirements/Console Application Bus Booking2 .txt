@@ -1,0 +1,233 @@
+﻿4. Option 1 — View Bus Details
+Display all available buses.
+Example:
+------------------------------------------------------------
+BusId   Bus Name       From       To          Seats  Timing
+------------------------------------------------------------
+101     TNSTC Express  Nagercoil  Chennai     40     08:30 PM
+102     SETC Express   Madurai    Chennai     45     09:00 PM
+103     Express Line   Chennai    Coimbatore  40     07:30 AM
+------------------------------------------------------------
+
+The available seats should be updated whenever a booking or cancellation occurs.
+
+
+5. Option 2 — Search for Bus
+The user should be able to search for a bus based on:
+Starting Point
+Ending Point
+
+Example:
+Enter Starting Point: Nagercoil
+Enter Destination: Chennai
+
+Display matching buses:
+Buses Available:
+
+Bus ID     : 101
+Bus Name   : TNSTC Express
+From       : Nagercoil
+To         : Chennai
+Seats      : 35
+Timing     : 08:30 PM
+
+If no bus is available, throw/handle: BusNotFoundException
+
+Option 3 — Check Seat Availability
+The user should select a bus.
+Example:
+Enter Bus ID: 101
+
+Bus Name       : TNSTC Express
+Total Seats    : 40
+Available Seats: 35
+Booked Seats   : 5
+
+Option 4 — Book Ticket
+This is the main functionality of the project.
+Step 1 — Enter Journey Details
+Enter Starting Point: Nagercoil
+
+Enter Destination: Chennai
+
+The application should display only buses matching the route.
+Available Buses
+----------------------------------------------
+Bus ID   Bus Name          Seats    Timing
+----------------------------------------------
+101      TNSTC Express     35       08:30 PM
+105      Travel Express    20       09:00 PM
+
+Step 2 — Select Bus
+Enter Bus ID: 101
+
+The application should validate whether the selected bus exists.
+Step 3 — Check Seat Availability
+Total Seats     : 40
+Available Seats : 35
+
+How many passengers do you want to book?
+
+For example:
+Number of Passengers: 3
+
+If the user requests more seats than available:
+InvalidBookingException:
+Requested seats are not available.
+
+Step 4 — Enter Passenger Details
+For each passenger:
+Passenger 1
+
+Enter Passenger Name: Arun Kumar
+Enter Phone Number: 9876543210
+Enter Age: 25
+Enter City: Nagercoil
+
+Then:
+Passenger 2
+
+Enter Passenger Name: Kumar
+Enter Phone Number: 9876543211
+Enter Age: 28
+Enter City: Nagercoil
+
+Passenger IDs should automatically be generated.
+
+
+8. Booking Confirmation
+After successful booking, display a confirmation message.
+Example:
+========================================
+          BOOKING CONFIRMED
+========================================
+
+Bus ID        : 101
+Bus Name      : TNSTC Express
+
+Passenger ID  : 1001
+Passenger Name: Arun Kumar
+
+Starting Point: Nagercoil
+Destination   : Chennai
+
+Timing        : 08:30 PM
+
+========================================
+        HAPPY JOURNEY!
+========================================
+
+
+For multiple passengers, display the booking details for each passenger.
+The bus's available seats must automatically decrease.
+
+For example:
+Before Booking:
+Available Seats = 35
+
+3 seats booked
+
+After Booking:
+Available Seats = 32
+
+Option 5 — View Passenger Details
+Display passenger information.
+Example:
+---------------------------------------------------------
+ID      Name          Phone        Age    City
+---------------------------------------------------------
+1001    Arun Kumar    9876543210   25     Nagercoil
+1002    Kumar         9876543211   28     Nagercoil
+---------------------------------------------------------
+
+Option 6 — Update Passenger Details
+Users should be able to update their own passenger information.
+Example:
+Enter Passenger ID: 1001
+
+Passenger Found.
+
+1. Update Name
+2. Update Phone Number
+3. Update Age
+4. Update City
+5. Update All Details
+
+Enter Choice:
+
+After updating:
+Passenger details updated successfully.
+
+The Passenger ID should not change.
+
+Option 7 — Cancel Ticket
+The user should be able to cancel a booking using the Passenger ID or Booking ID.
+Example:
+Enter Passenger ID: 1001
+
+Passenger Found.
+
+Are you sure you want to cancel the ticket?
+1. Yes
+2. No
+
+After cancellation:
+Ticket cancelled successfully.
+
+The cancelled seat should be returned to the bus.
+Example:
+Before Cancellation:
+Available Seats = 32
+
+1 Ticket Cancelled
+
+After Cancellation:
+Available Seats = 33
+
+
+Admin Module
+The application should have a separate Admin menu.
+Example:
+========================================
+             ADMIN MENU
+========================================
+
+1. View All Buses
+2. Add New Bus
+3. Update Bus
+4. Delete Bus
+5. Search Bus
+6. Exit Admin Menu
+
+Enter Choice:
+
+Admin CRUD Operations
+Create
+Admin can add a new bus:
+Enter Bus ID:
+Enter Bus Name:
+Enter Starting Point:
+Enter Ending Point:
+Enter Total Seats:
+Enter Timing:
+
+Read
+Admin can view all buses.
+Update
+Admin can update:
+Bus Name
+Starting Point
+Ending Point
+Total Seats
+Timing
+
+Delete
+Admin can delete a bus.
+Before deleting:
+Are you sure you want to delete Bus ID 101?
+
+1. Yes
+2. No
+
+If the bus does not exist:
+BusNotFoundException
