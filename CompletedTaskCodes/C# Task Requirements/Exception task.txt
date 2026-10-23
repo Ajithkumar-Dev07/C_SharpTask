@@ -1,0 +1,173 @@
+# C# Exception Handling – Student Assessment Task
+
+## Task Title: Banking Transaction Management System
+
+### 1. Objective
+
+Develop a console-based Banking Transaction Management System using C#. The application must handle built-in system exceptions and user-defined custom exceptions using `try`, `catch`, `finally`, `throw`, and `Exception`.
+
+### 2. Application Requirements
+
+Create a `BankAccount` class with the following properties:
+
+- `AccountNumber` – string
+- `AccountHolderName` – string
+- `Balance` – decimal
+- `PIN` – integer
+
+Create a menu-driven application with the following options:
+
+1. Display Account Details
+2. Deposit Money
+3. Withdraw Money
+4. Divide Transaction Amount
+5. Search Account by Index
+6. Exit
+
+### 3. System Exception Handling
+
+**Task 1: FormatException**
+
+- Ask the user to enter the deposit amount.
+- Handle cases where the user enters text instead of a valid number.
+- Display an appropriate error message without terminating the application.
+
+**Task 2: DivideByZeroException**
+
+- Ask the user to enter a transaction amount and a divisor.
+- Perform division using these values.
+- Handle the exception when the divisor is zero.
+
+**Task 3: IndexOutOfRangeException**
+
+- Store account numbers in an array.
+- Ask the user to enter an array index to view an account number.
+- Handle invalid indexes without crashing the application.
+
+**Task 4: NullReferenceException**
+
+- Create an account object that is initially `null`.
+- Attempt to access its account holder name.
+- Handle the exception and display a meaningful message.
+
+**Task 5: OverflowException**
+
+- Convert a user-entered number into an integer using a suitable conversion method.
+- Handle values that exceed the supported integer range.
+
+### 4. Custom Exception Handling
+
+Create the following custom exception classes by inheriting from `Exception`.
+
+**Task 6: InvalidPINException**
+
+- Create a custom exception named `InvalidPINException`.
+- Ask the user to enter their PIN before performing a transaction.
+- If the PIN is incorrect, throw the custom exception.
+- Allow a maximum of three attempts.
+- After three failed attempts, cancel the transaction.
+
+**Task 7: InsufficientBalanceException**
+
+- Create a custom exception named `InsufficientBalanceException`.
+- Ask the user to enter a withdrawal amount.
+- If the withdrawal amount exceeds the available balance, throw this exception.
+- Display the available balance and an appropriate error message.
+- Do not deduct money when the balance is insufficient.
+
+**Task 8: InvalidTransactionAmountException**
+
+- Create a custom exception named `InvalidTransactionAmountException`.
+- The deposit and withdrawal amounts must be greater than zero.
+- If the user enters zero or a negative amount, throw the custom exception.
+- Reject the transaction without modifying the account balance.
+
+**Task 9: MinimumBalanceException**
+
+- The account must maintain a minimum balance of ₹500.
+- If a withdrawal would reduce the balance below ₹500, throw a custom exception.
+- Allow the withdrawal only when the minimum balance requirement is satisfied.
+
+### 5. Exception Handling Rules
+
+1. Use separate `catch` blocks for different exception types where appropriate.
+2. Use `finally` to display a transaction-completion message or perform cleanup.
+3. Use `throw` to raise custom exceptions when business rules are violated.
+4. Display meaningful error messages instead of exposing unnecessary technical details.
+5. Keep the application running after recoverable errors.
+6. Use methods for deposit, withdrawal, PIN validation, and account display.
+7. Use a loop to repeatedly display the menu until the user selects Exit.
+8. Ensure failed transactions never change the account balance.
+
+### 6. Expected Output Scenarios
+
+**Scenario 1: Invalid Deposit**
+
+Input: `abc`
+
+Output:
+- Invalid amount format.
+- Please enter a valid numeric amount.
+- Transaction cancelled.
+
+**Scenario 2: Insufficient Balance**
+
+Available Balance: ₹2,000
+
+Withdrawal Amount: ₹3,000
+
+Output:
+- Insufficient balance.
+- Available Balance: ₹2,000.
+- Transaction cancelled.
+
+**Scenario 3: Invalid PIN**
+
+Input: Three incorrect PIN attempts.
+
+Output:
+- Invalid PIN.
+- Attempts remaining: 2.
+- Invalid PIN.
+- Attempts remaining: 1.
+- Maximum attempts exceeded. Transaction cancelled.
+
+**Scenario 4: Minimum Balance Violation**
+
+Available Balance: ₹2,000
+
+Withdrawal Amount: ₹1,700
+
+Output:
+- Minimum balance requirement violated.
+- Your account must maintain ₹500.
+- Transaction cancelled.
+
+**Scenario 5: Successful Transaction**
+
+Available Balance: ₹5,000
+
+Withdrawal Amount: ₹1,000
+
+Output:
+- Withdrawal successful.
+- Withdrawn Amount: ₹1,000.
+- Remaining Balance: ₹4,000.
+
+### 7. Submission Requirements
+
+- Submit the complete C# console application.
+- Create separate custom exception classes.
+- Use meaningful method and variable names.
+- Include comments explaining the purpose of each exception.
+- Test every system exception and custom exception scenario.
+- Submit the source code through the designated GitHub repository.
+
+### 8. Bonus Challenge
+
+- Create a common method to log exception messages to a text file using file handling.
+- Use a general `catch (Exception ex)` block only after specific exception handlers.
+- Demonstrate the difference between `throw;` and `throw ex;`.
+- Use `TryParse()` to validate input before conversion and compare its behavior with exception-based validation.
+
+**Note:** Some system exceptions are difficult to trigger reliably with normal application input. For example, `NullReferenceException` and `IndexOutOfRangeException` should be demonstrated deliberately for this assessment. In production applications, validate inputs and object references instead of relying on exceptions for routine control flow.
