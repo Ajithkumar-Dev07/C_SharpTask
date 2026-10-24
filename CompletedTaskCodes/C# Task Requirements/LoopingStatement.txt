@@ -1,0 +1,241 @@
+C# LOOPING STATEMENTS – INTERMEDIATE LEVEL TASKS
+================================================
+
+Topics:
+1. for Loop – Electricity Bill Calculator
+2. while Loop – Fibonacci Series and Number Analysis
+3. do-while Loop – Prime Number Analyzer
+
+General Instructions:
+---------------------
+1. Develop all three tasks as separate C# Console Applications or as separate programs within one solution.
+2. Use the specified loop as the primary loop for each task.
+3. Validate user inputs and handle invalid values appropriately.
+4. Use meaningful variable names and suitable data types.
+5. Use methods wherever appropriate to improve code readability.
+6. Display the results in a clear and understandable format.
+7. Test the application with normal inputs, boundary values, and invalid inputs.
+8. Submit the source code and screenshots of the output.
+
+================================================
+TASK 1: ELECTRICITY BILL CALCULATOR
+================================================
+
+Loop: for Loop
+
+Scenario:
+---------
+Develop a C# console application to calculate electricity bills for multiple households. The application must calculate each household's energy charges based on the units consumed and display the total collection.
+
+Requirements:
+-------------
+
+1. Ask the user to enter the number of households for which bills must be calculated.
+
+2. Use a for loop to process each household.
+
+3. For every household, collect the following details:
+   - Consumer Number
+   - Consumer Name
+   - Units Consumed
+
+4. Calculate the electricity bill using the following tariff slabs:
+
+   First 100 units       - Rs. 1.50 per unit
+   Next 100 units        - Rs. 2.50 per unit
+   Next 300 units        - Rs. 4.00 per unit
+   Units above 500       - Rs. 6.00 per unit
+
+5. Apply the tariff progressively. Each slab must be charged at its corresponding rate.
+
+   Example:
+   If a consumer uses 250 units:
+
+   First 100 units = 100 x 1.50 = Rs. 150
+   Next 100 units  = 100 x 2.50 = Rs. 250
+   Remaining 50    =  50 x 4.00 = Rs. 200
+
+   Total Bill = Rs. 600
+
+6. If the units consumed are zero, display an energy charge of Rs. 0.
+
+7. Reject negative unit values and ask the user to enter valid input.
+
+8. Display the following details for each household:
+   - Consumer Number
+   - Consumer Name
+   - Units Consumed
+   - Electricity Bill Amount
+
+9. After processing all households, display:
+   - Total Number of Consumers
+   - Total Units Consumed
+   - Total Electricity Bill Collection
+   - Consumer Name and Bill Amount of the Consumer with the Highest Bill
+
+Sample Input and Output:
+------------------------
+
+Enter number of households: 3
+
+Consumer Number: 101
+Consumer Name: Arun
+Units Consumed: 80
+Electricity Bill: Rs. 120.00
+
+Consumer Number: 102
+Consumer Name: Priya
+Units Consumed: 250
+Electricity Bill: Rs. 600.00
+
+Consumer Number: 103
+Consumer Name: Kumar
+Units Consumed: 600
+Electricity Bill: Rs. 2450.00
+
+Total Consumers: 3
+Total Units: 930
+Total Collection: Rs. 3170.00
+Highest Bill: Kumar - Rs. 2450.00
+
+Note:
+-----
+This task calculates energy charges only. Fixed charges, taxes, subsidies, and other actual electricity billing rules are excluded.
+
+================================================
+TASK 2: FIBONACCI SERIES AND NUMBER ANALYSIS
+================================================
+
+Loop: while Loop
+
+Scenario:
+---------
+Develop a C# console application that generates a Fibonacci series based on the number of terms entered by the user. The application must also perform statistical analysis on the generated series.
+
+Requirements:
+-------------
+
+1. Ask the user to enter the number of terms required.
+
+2. Accept only values between 1 and 45. If the input is invalid, request a valid value.
+
+3. Use a while loop to generate the Fibonacci series.
+
+4. Start the series with 0 and 1. Each subsequent term must be the sum of the previous two terms.
+
+5. Calculate the sum of all generated Fibonacci terms.
+
+6. Count the number of even and odd terms in the generated series.
+
+7. Identify and display the largest Fibonacci term generated.
+
+8. Identify and display all Fibonacci terms that are prime numbers.
+
+9. Display the complete series and the calculated statistics after processing.
+
+10. Implement prime-number checking using a separate loop or a separate method.
+
+11. Use the long data type for Fibonacci calculations within the specified limit.
+
+Sample Input and Output:
+------------------------
+
+Enter number of terms: 10
+
+Fibonacci Series:
+0 1 1 2 3 5 8 13 21 34
+
+Sum of Series: 88
+Even Terms Count: 4
+Odd Terms Count: 6
+Largest Term: 34
+Prime Fibonacci Terms: 2, 3, 5, 13
+
+================================================
+TASK 3: PRIME NUMBER ANALYZER
+================================================
+
+Loop: do-while Loop
+
+Scenario:
+---------
+Develop a menu-driven C# console application that allows users to check prime numbers, display prime numbers within a range, and count the prime numbers within a range.
+
+The application must continue running until the user selects the Exit option.
+
+Requirements:
+-------------
+
+1. Display the following menu using a do-while loop:
+
+   ===== NUMBER ANALYZER =====
+
+   1. Check Whether a Number is Prime
+   2. Display Prime Numbers in a Range
+   3. Count Prime Numbers in a Range
+   4. Exit
+
+   Enter your choice:
+
+2. Option 1 – Check Whether a Number is Prime
+
+   - Accept an integer from the user.
+   - Determine whether the number is prime.
+   - Display whether the number is prime or not.
+   - If the number is not prime, display its positive factors.
+   - Numbers less than or equal to 1 must not be considered prime.
+
+3. Option 2 – Display Prime Numbers in a Range
+
+   - Accept a starting number and an ending number.
+   - Display all prime numbers within the specified range.
+   - Include the endpoints if they are prime.
+   - Reject a starting number greater than the ending number.
+
+4. Option 3 – Count Prime Numbers in a Range
+
+   - Accept a starting number and an ending number.
+   - Count all prime numbers within the range.
+   - Display the total number of prime numbers found.
+   - Validate the range before processing.
+
+5. Option 4 – Exit
+
+   - Terminate the application.
+   - Display a suitable exit message.
+
+6. If the user enters an invalid menu choice, display an error message and show the menu again.
+
+7. Use a do-while loop for the main menu and suitable loops for prime checking and range processing.
+
+Sample Input and Output:
+------------------------
+
+===== NUMBER ANALYZER =====
+1. Check Whether a Number is Prime
+2. Display Prime Numbers in a Range
+3. Count Prime Numbers in a Range
+4. Exit
+
+Enter your choice: 2
+Enter starting number: 10
+Enter ending number: 30
+
+Prime Numbers:
+11 13 17 19 23 29
+
+===== NUMBER ANALYZER =====
+Enter your choice: 3
+Enter starting number: 1
+Enter ending number: 20
+
+Total Prime Numbers: 8
+
+===== NUMBER ANALYZER =====
+Enter your choice: 4
+
+Thank you for using Number Analyzer!
+
+
+
+END OF TASKS
