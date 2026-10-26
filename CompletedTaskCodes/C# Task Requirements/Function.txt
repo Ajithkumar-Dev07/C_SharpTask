@@ -1,0 +1,148 @@
+# C# Functions – Intermediate-Level Programming Tasks
+
+## Objective
+Practice user-defined functions in C# using parameters, return types, function calling, input validation, and reusable code.
+
+Students must complete the following tasks using a C# Console Application. Do not write the entire program inside the `Main()` method. Divide the program into separate functions based on their responsibilities.
+
+---
+
+# Task 1: Employee Salary Calculator
+
+## Scenario
+Develop an employee salary calculator that generates a salary slip based on the employee's basic salary, allowances, and deductions.
+
+## Requirements
+1. Create a function `GetEmployeeDetails()` to collect Employee ID, Name, and Basic Salary.
+2. Create `CalculateHRA()` to calculate HRA as 20% of the basic salary.
+3. Create `CalculateDA()` to calculate DA as 10% of the basic salary.
+4. Create `CalculatePF()` to calculate PF as 12% of the basic salary.
+5. Create `CalculateNetSalary()` to calculate the final salary.
+6. Create `DisplaySalarySlip()` to display all employee details and salary components.
+7. Validate the basic salary. It must be greater than zero.
+
+## Formula
+HRA = Basic Salary * 20 / 100
+
+DA = Basic Salary * 10 / 100
+
+PF = Basic Salary * 12 / 100
+
+Net Salary = Basic Salary + HRA + DA - PF
+
+## Sample Output
+Employee ID: 101
+Employee Name: Arun
+Basic Salary: 30000.00
+HRA: 6000.00
+DA: 3000.00
+PF: 3600.00
+Net Salary: 35400.00
+
+---
+
+# Task 2: Banking Transaction System
+
+## Scenario
+Develop a simple banking application that allows users to check their balance, deposit money, and withdraw money through a menu-driven console application.
+
+## Requirements
+1. Create `DisplayMenu()` to display the available banking operations.
+2. Create `CheckBalance()` to display the current balance.
+3. Create `Deposit()` to add money to the account.
+4. Create `Withdraw()` to withdraw money after validation.
+5. Create `ProcessTransaction()` to handle the user's menu selection.
+6. Use a `while` loop to display the menu repeatedly until the user selects Exit.
+7. Use a `switch` statement to process the selected option.
+8. Update the account balance after every successful transaction.
+9. Validate all deposit and withdrawal amounts. Amounts must be greater than zero.
+10. Prevent withdrawals that exceed the available balance.
+11. Display an error message for invalid menu selections.
+
+## Initial Balance
+Rs. 10,000
+
+## Menu
+1. Check Balance
+2. Deposit
+3. Withdraw
+4. Exit
+
+## Expected Behaviour
+- Selecting Check Balance displays the current balance.
+- Selecting Deposit adds the entered amount to the balance.
+- Selecting Withdraw deducts the amount only if sufficient funds are available.
+- Selecting Exit terminates the application.
+- The balance must remain updated throughout the application.
+
+## Challenge
+Add a transaction history feature to record and display all successful deposits and withdrawals.
+
+---
+
+# Task 3: Shopping Cart and Billing System
+
+## Scenario
+Develop a billing application for a retail shop. The application must calculate item totals, apply discounts, and generate the final bill for multiple products.
+
+## Requirements
+1. Create `GetProductDetails()` to collect the product name, unit price, and quantity.
+2. Create `CalculateItemTotal()` to calculate the total price for each product.
+3. Create `CalculateDiscount()` to calculate the discount based on the subtotal.
+4. Create `CalculateFinalAmount()` to calculate the final payable amount.
+5. Create `DisplayBill()` to display the product details and billing summary.
+6. Allow users to enter multiple products using a loop.
+7. Validate product prices and quantities. Both must be greater than zero.
+
+## Discount Rules
+- Subtotal below Rs. 1,000: No discount.
+- Subtotal from Rs. 1,000 to Rs. 4,999.99: 5% discount.
+- Subtotal of Rs. 5,000 or above: 10% discount.
+
+## Formula
+Item Total = Unit Price * Quantity
+
+Subtotal = Sum of all item totals
+
+Discount = Subtotal * Applicable Discount Percentage / 100
+
+Final Amount = Subtotal - Discount
+
+## Sample Output
+Product: Keyboard
+Unit Price: Rs. 800
+Quantity: 2
+Item Total: Rs. 1600
+
+Subtotal: Rs. 1600
+Discount: Rs. 80
+Final Amount: Rs. 1520
+
+## Challenge
+Apply GST at 18% after the discount and display the subtotal, discount, GST, and final payable amount separately.
+
+---
+
+# General Instructions
+
+1. Use C# Console Application.
+2. Use meaningful function names.
+3. Use appropriate parameters and return types.
+4. Avoid duplicating the same logic in multiple places.
+5. Validate user inputs before performing calculations.
+6. Keep the `Main()` method clean by calling the required functions.
+7. Test the application with valid and invalid inputs.
+8. Upload the source code to GitHub.
+9. Include a README file explaining the selected task and how to run the application.
+
+## Learning Outcomes
+After completing these tasks, students should be able to:
+- Create and call user-defined functions.
+- Pass values through parameters.
+- Return calculated values from functions.
+- Divide a program into reusable methods.
+- Combine functions with conditions, loops, and switch statements.
+- Perform input validation and solve real-world programming problems.
+
+## Submission
+Submit the GitHub repository link containing the completed C# source code.
