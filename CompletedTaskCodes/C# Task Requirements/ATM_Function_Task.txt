@@ -1,0 +1,308 @@
+# C# Programming Task: ATM Management System Using Functions
+
+## 1. Objective
+
+Develop a console-based ATM Management System using C# Functions. The application should allow users to check their balance, withdraw money, deposit money, change their PIN, and exit the application.
+
+Students must implement separate functions for each operation and validate the user's PIN before allowing access to any banking operation.
+
+## 2. Scenario
+
+You are developing a basic ATM application for a bank. A customer should be able to perform banking operations only after entering the correct PIN.
+
+The application must continue running until the user selects the Exit option. If the PIN is incorrect, the user should receive a maximum of three attempts to enter the correct PIN for that operation.
+
+## 3. Initial Values
+
+- Initial Account Balance: Rs. 10,000
+- Initial ATM PIN: 1234
+- Maximum PIN Attempts: 3
+- Minimum Withdrawal Amount: Rs. 500
+- Maximum Withdrawal Amount: Rs. 50,000
+- Minimum Deposit Amount: Rs. 500
+- Maximum Deposit Amount: Rs. 50,000
+
+These values should be initialized at the beginning of the application.
+
+## 4. Main Menu
+
+Display the following menu whenever the application starts and after each completed operation.
+
+```text
+========== ATM MANAGEMENT SYSTEM ==========
+
+1. Check Balance
+2. Withdraw Money
+3. Deposit Money
+4. Change PIN
+5. Exit
+
+Enter your choice:
+```
+
+The application must accept the user's choice and execute the corresponding function.
+
+## 5. Functional Requirements
+
+### Task 1: Check Balance
+
+Create a function named `CheckBalance()`.
+
+Requirements:
+
+1. Ask the user to enter their current ATM PIN.
+2. Validate the PIN before displaying the balance.
+3. Allow a maximum of three attempts to enter the correct PIN.
+4. If the PIN is correct, display the current account balance.
+5. If all three attempts are incorrect, deny access to the balance and return to the main menu.
+6. Do not modify the account balance during this operation.
+
+Example output:
+
+```text
+Enter your ATM PIN: ****
+
+PIN verified successfully.
+Your current balance is Rs. 10000
+```
+
+### Task 2: Withdraw Money
+
+Create a function named `Withdraw()`.
+
+Requirements:
+
+1. Ask the user to enter their ATM PIN before requesting the withdrawal amount.
+2. Validate the PIN before proceeding.
+3. Allow a maximum of three PIN attempts.
+4. If the PIN is incorrect after three attempts, cancel the withdrawal and return to the main menu.
+5. If the PIN is correct, ask the user to enter the withdrawal amount.
+6. The withdrawal amount must be between Rs. 500 and Rs. 50,000, inclusive.
+7. The amount must be a multiple of Rs. 500.
+8. Check whether the account has sufficient funds.
+9. If the amount exceeds the available balance, display an insufficient balance message.
+10. Deduct the amount only when all validations pass.
+11. Display the withdrawn amount and updated balance after a successful withdrawal.
+
+Example output:
+
+```text
+Enter your ATM PIN: ****
+PIN verified successfully.
+
+Enter withdrawal amount: 2000
+
+Withdrawal successful!
+Withdrawn Amount: Rs. 2000
+Remaining Balance: Rs. 8000
+```
+
+Important: The balance must not change if the PIN is incorrect, the amount is invalid, or the balance is insufficient.
+
+### Task 3: Deposit Money
+
+Create a function named `Deposit()`.
+
+Requirements:
+
+1. Ask the user to enter their ATM PIN before requesting the deposit amount.
+2. Validate the PIN before proceeding.
+3. Allow a maximum of three PIN attempts.
+4. If all attempts fail, cancel the deposit and return to the main menu.
+5. If the PIN is correct, ask the user to enter the deposit amount.
+6. The deposit amount must be between Rs. 500 and Rs. 50,000, inclusive.
+7. The amount must be a multiple of Rs. 500.
+8. Add the amount to the current account balance only after validation.
+9. Display a success message and the updated balance.
+
+Example output:
+
+```text
+Enter your ATM PIN: ****
+PIN verified successfully.
+
+Enter deposit amount: 5000
+
+Deposit successful!
+Deposited Amount: Rs. 5000
+Updated Balance: Rs. 15000
+```
+
+Important: Do not update the balance if the PIN or deposit amount is invalid.
+
+### Task 4: Change PIN
+
+Create a function named `ChangePin()`.
+
+Requirements:
+
+1. Ask the user to enter their current ATM PIN.
+2. Validate the current PIN before allowing a change.
+3. Allow a maximum of three attempts to enter the current PIN.
+4. If all attempts fail, cancel the PIN change and return to the main menu.
+5. If the current PIN is correct, ask the user to enter a new PIN.
+6. The new PIN must contain exactly four digits.
+7. The new PIN must not be the same as the current PIN.
+8. Ask the user to confirm the new PIN.
+9. The new PIN and confirmation PIN must match.
+10. Update the ATM PIN only after all validations pass.
+11. Display a success message after changing the PIN.
+12. All subsequent transactions must use the new PIN.
+
+Example output:
+
+```text
+Enter current PIN: ****
+Current PIN verified successfully.
+
+Enter new PIN: ****
+Confirm new PIN: ****
+
+PIN changed successfully!
+```
+
+Important: If the new PIN or confirmation is invalid, retain the existing PIN.
+
+### Task 5: Exit
+
+Create a function named `ExitATM()`.
+
+Requirements:
+
+1. When the user selects Exit, display a thank-you message.
+2. Terminate the application gracefully.
+3. Do not request a PIN for the Exit option because no banking transaction or account information is being accessed.
+
+Example output:
+
+```text
+Thank you for using our ATM.
+Please collect your card.
+Have a nice day!
+```
+
+## 6. PIN Validation Rules
+
+Create a reusable function named `ValidatePin()` or `AuthenticateUser()`.
+
+Requirements:
+
+1. Compare the entered PIN with the current ATM PIN.
+2. Return a Boolean result indicating whether the PIN is correct.
+3. Allow a maximum of three attempts for each protected operation.
+4. If the PIN is correct, allow the selected operation to continue.
+5. If all attempts fail, cancel only the current operation and return to the main menu.
+6. Reset the attempt counter whenever a new protected operation begins.
+7. Always validate against the current PIN, including after the PIN has been changed.
+
+The PIN validation logic should be reused by Check Balance, Withdraw, Deposit, and Change PIN. Do not duplicate the same authentication logic inside every function.
+
+For security, do not display the actual PIN while the user enters it. A console application may use a masked input method or accept ordinary input if masking is outside the scope of the lesson.
+
+## 7. Function Requirements
+
+Students must create and use the following functions:
+
+| Function Name | Responsibility |
+|---|---|
+| `DisplayMenu()` | Display all ATM options |
+| `ValidatePin()` or `AuthenticateUser()` | Validate the entered PIN with a maximum of three attempts |
+| `CheckBalance()` | Authenticate and display the current balance |
+| `Withdraw()` | Authenticate and process withdrawals |
+| `Deposit()` | Authenticate and process deposits |
+| `ChangePin()` | Authenticate and update the PIN |
+| `ExitATM()` | Display the exit message |
+| `Main()` | Initialize values, control the menu loop, and call the appropriate functions |
+
+Students may create additional helper functions where necessary.
+
+## 8. Main Program Requirements
+
+1. Initialize the account balance and ATM PIN.
+2. Use a `while` loop to display the main menu repeatedly.
+3. Use a `switch` statement to process the selected menu option.
+4. Call the appropriate function for each operation.
+5. Display an error message when the user enters an invalid menu option.
+6. Continue running after a failed PIN validation or unsuccessful transaction.
+7. Stop the loop only when the user selects Exit.
+8. Keep the `Main()` function organized; move operation-specific logic into separate functions.
+
+## 9. Input Validation
+
+The application must handle the following situations:
+
+- Non-numeric menu choices.
+- Non-numeric or invalid transaction amounts.
+- Zero or negative deposit and withdrawal amounts.
+- Amounts below Rs. 500 or above Rs. 50,000.
+- Amounts that are not multiples of Rs. 500.
+- Withdrawals exceeding the available balance.
+- Incorrect PIN entered three times.
+- New PIN containing fewer or more than four digits.
+- New PIN matching the existing PIN.
+- Confirmation PIN not matching the new PIN.
+- Invalid menu options.
+
+The application must display a suitable message and continue running instead of terminating unexpectedly because of invalid user input.
+
+## 10. Sample Test Cases
+
+| Test Case | Expected Result |
+|---|---|
+| Correct PIN for Check Balance | Display current balance |
+| Incorrect PIN three times | Deny access and return to menu |
+| Withdraw Rs. 2,000 with sufficient funds | Deduct amount and display updated balance |
+| Withdraw Rs. 50,001 | Reject amount |
+| Withdraw more than available balance | Display insufficient balance |
+| Deposit Rs. 5,000 | Add amount and display updated balance |
+| Deposit Rs. 300 | Reject amount |
+| Change PIN with valid inputs | Update PIN successfully |
+| Use old PIN after changing it | Reject old PIN |
+| Use new PIN after changing it | Accept new PIN |
+| Enter an invalid menu choice | Display error and show menu again |
+| Select Exit | Display thank-you message and terminate |
+
+## 11. Technical Constraints
+
+1. Use C# Console Application.
+2. Use user-defined functions for each operation.
+3. Apply appropriate function parameters and return types.
+4. Use `while` and `switch` for menu control.
+5. Use `if-else` statements for validation.
+6. Maintain the balance and current PIN throughout the application.
+7. Do not write the entire application inside `Main()`.
+8. Avoid duplicating the PIN validation logic.
+9. Use meaningful variable and function names.
+10. Test all operations before submission.
+
+## 12. Bonus Challenges
+
+Students who complete the main requirements can implement:
+
+1. Display a mini statement containing the last five successful transactions.
+2. Store transaction details such as type, amount, date, and updated balance.
+3. Add a transaction ID for every successful deposit or withdrawal.
+4. Display the total number of successful transactions.
+5. Prevent deposits that would exceed a configured maximum account balance.
+6. Organize the program using a class named `ATM` with suitable fields and methods.
+
+## 13. Submission Requirements
+
+1. Create a C# Console Application.
+2. Implement all five ATM menu options.
+3. Test every operation using correct and incorrect inputs.
+4. Upload the source code to GitHub.
+5. Add a README file describing the application, its features, and how to run it.
+6. Submit the GitHub repository link.
+
+## Expected Learning Outcomes
+
+After completing this task, students should be able to:
+
+- Create and call static and non-static functions.
+- Use parameters and return values effectively.
+- Reuse a common PIN validation function.
+- Combine functions with loops, conditions, and switch statements.
+- Maintain and update application state.
+- Validate user inputs and handle invalid operations.
+- Design a menu-driven console application using a real-world banking scenario.
