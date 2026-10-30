@@ -1,0 +1,224 @@
+# C# Programming Assignment – Constructors
+
+## Topics Covered
+1. Default Constructor
+2. Parameterized Constructor
+3. Copy Constructor
+
+**Difficulty Level:** Intermediate
+
+---
+
+# Task 1: Employee Registration System
+
+**Constructor Type:** Default Constructor
+
+### Scenario
+A company wants to create an Employee Registration System. Whenever a new employee object is created, the system should automatically assign default employee details.
+
+### Requirements
+
+1. Create an `Employee` class with the following properties:
+   - EmployeeId
+   - EmployeeName
+   - Department
+   - Designation
+   - Salary
+
+2. Create a Default Constructor and initialize the following values:
+
+   - EmployeeId = 1001
+   - EmployeeName = "Not Assigned"
+   - Department = "General"
+   - Designation = "Trainee"
+   - Salary = 15000
+
+3. Create a method named `DisplayEmployeeDetails()` to display employee information.
+
+4. In the Main method:
+   - Create at least three Employee objects.
+   - Display the details of all employees.
+   - Verify that all objects receive the default values automatically.
+
+### Expected Output
+
+Employee 1 Details:
+Employee ID: 1001
+Employee Name: Not Assigned
+Department: General
+Designation: Trainee
+Salary: 15000
+
+Employee 2 Details:
+Employee ID: 1001
+Employee Name: Not Assigned
+Department: General
+Designation: Trainee
+Salary: 15000
+
+---
+
+# Task 2: Bank Account Management System
+
+**Constructor Type:** Parameterized Constructor
+
+### Scenario
+A bank wants to create customer accounts. Whenever a new customer opens an account, their personal and account details should be initialized through a Parameterized Constructor.
+
+### Requirements
+
+1. Create a `BankAccount` class with the following properties:
+   - AccountNumber
+   - CustomerName
+   - AccountType
+   - Balance
+
+2. Create a Parameterized Constructor that accepts all four values.
+
+3. Create the following methods:
+
+   - `DisplayAccountDetails()` – Display customer and account information.
+   - `Deposit(double amount)` – Add money to the account.
+   - `Withdraw(double amount)` – Deduct money from the account.
+   - `CheckBalance()` – Display the current balance.
+
+4. Apply the following validations:
+
+   - Initial balance must not be negative.
+   - Deposit amount must be greater than zero.
+   - Withdrawal amount must be greater than zero.
+   - Withdrawal amount must not exceed the available balance.
+
+5. In the Main method:
+
+   - Create at least three BankAccount objects with different customer details.
+   - Perform deposit operations.
+   - Perform withdrawal operations.
+   - Display the updated account balance.
+
+### Expected Output
+
+Account Number: 10001
+Customer Name: Ajay
+Account Type: Savings
+Initial Balance: 25000
+
+Deposit Amount: 5000
+Updated Balance: 30000
+
+Withdrawal Amount: 10000
+Updated Balance: 20000
+
+---
+
+# Task 3: Product Duplicate Management System
+
+**Constructor Type:** Copy Constructor
+
+### Scenario
+An e-commerce company wants to duplicate existing product information when creating a similar product. Instead of assigning every property manually, the system should use a Copy Constructor.
+
+### Requirements
+
+1. Create a `Product` class with the following properties:
+
+   - ProductId
+   - ProductName
+   - Category
+   - Price
+   - StockQuantity
+
+2. Create a Parameterized Constructor to initialize product details.
+
+3. Create a Copy Constructor that accepts another Product object and copies all its property values into the new object.
+
+4. Create the following methods:
+
+   - `DisplayProductDetails()` – Display product information.
+   - `UpdatePrice(double newPrice)` – Update product price.
+   - `UpdateStock(int quantity)` – Update product stock.
+
+5. In the Main method:
+
+   - Create an original product using the Parameterized Constructor.
+   - Create a duplicate product using the Copy Constructor.
+   - Display both product details.
+   - Change the original product's price and stock quantity.
+   - Display both objects again.
+   - Verify that modifying the original object does not modify the copied object's property values.
+
+### Expected Output
+
+Original Product:
+Product ID: 101
+Product Name: Laptop
+Category: Electronics
+Price: 55000
+Stock: 20
+
+Copied Product:
+Product ID: 101
+Product Name: Laptop
+Category: Electronics
+Price: 55000
+Stock: 20
+
+After Updating Original Product:
+
+Original Product Price: 60000
+Original Product Stock: 15
+
+Copied Product Price: 55000
+Copied Product Stock: 20
+
+---
+
+# Bonus Task: Student Admission System
+
+**Constructor Types:** Default, Parameterized and Copy Constructor
+
+### Scenario
+A college wants to develop a Student Admission System to manage student admission details using different types of constructors.
+
+### Requirements
+
+1. Create a `Student` class with the following properties:
+
+   - StudentId
+   - StudentName
+   - Course
+   - Fees
+   - CollegeName
+
+2. Implement all three constructors:
+
+   - Default Constructor – Assign default admission details.
+   - Parameterized Constructor – Accept student details during admission.
+   - Copy Constructor – Copy an existing student's details into another object.
+
+3. Create a method named `DisplayStudentDetails()` to display student information.
+
+4. In the Main method:
+
+   - Create one object using the Default Constructor.
+   - Create two objects using the Parameterized Constructor.
+   - Create one object using the Copy Constructor.
+   - Display all student details.
+   - Verify the values initialized through each constructor.
+
+---
+
+# General Instructions
+
+1. Complete all three main tasks.
+2. Use proper class names, property names and method names.
+3. Implement constructors inside their respective classes.
+4. Create and access objects from the Main method.
+5. Follow proper C# coding standards.
+6. Validate user inputs wherever required.
+7. Display outputs in a clear and readable format.
+8. Upload your completed source code to the assigned GitHub repository.
+
+**Submission:** Upload all task solutions to GitHub.
+
+**Note:** Do not copy code from other students. Understand the constructor implementation and complete the tasks independently.
