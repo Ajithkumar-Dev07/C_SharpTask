@@ -1,0 +1,57 @@
+﻿Task 2: Hierarchical Inheritance – Online Payment System
+Scenario:
+
+An e-commerce application supports multiple payment methods. 
+All payment methods share common payment information, 
+but each payment type has its own payment-processing logic.
+
+Requirements:
+1. Create a parent class named Payment.
+2. Declare the following properties:
+   - TransactionId
+   - Amount
+   - PaymentDate
+3. Create a method named DisplayPaymentDetails() to display common payment information.
+4. Create three child classes inheriting from Payment:
+   
+   Child Class 1: UpiPayment
+   - UpiId
+   - BankName
+   - Create a method ProcessUpiPayment().
+   Child Class 2: CreditCardPayment
+   - CardHolderName
+   - CardNumber
+   - Create a method ProcessCreditCardPayment().
+   Child Class 3: NetBankingPayment
+   - AccountHolderName
+   - BankName
+   - Create a method ProcessNetBankingPayment().
+5. Each child class should implement its own payment-processing method.
+6. Display the common payment details along with the respective payment method details.
+
+
+Expected Output:
+UPI PAYMENT
+-------------------------
+Transaction ID : TXN101
+Amount         : 2500
+Payment Date   : 03-11-2026
+UPI ID         : ajith@okaxis
+Bank Name      : Axis Bank
+Payment Status : Successful
+
+CREDIT CARD PAYMENT
+-------------------------
+Transaction ID : TXN102
+Amount         : 5000
+Card Holder    : Ajith Kumar
+Card Number    : XXXX-XXXX-XXXX-1234
+Payment Status : Successful
+
+NET BANKING PAYMENT
+-------------------------
+Transaction ID : TXN103
+Amount         : 3500
+Account Holder : Ajith Kumar
+Bank Name      : SBI
+Payment Status : Successful
