@@ -1,0 +1,65 @@
+﻿Task 3: Multilevel Inheritance – Hospital Management System
+Scenario:
+
+A hospital wants to maintain patient information, medical consultation details, and billing information. Instead of repeating properties in different classes, the hospital wants to implement multilevel inheritance.
+
+Requirements:
+1. Create a base class named Person.
+2. Declare the following properties:
+   - PersonId
+   - Name
+   - Age
+   - Gender
+3. Create a method named DisplayPersonDetails().
+4. Create a second-level class named Patient that inherits from Person.
+   
+   Add the following properties:
+   - PatientId
+   - Disease
+   - AdmissionDate
+   Create a method named DisplayPatientDetails().
+5. Create a third-level class named InPatient that inherits from Patient.
+   
+   Add the following properties:
+   - RoomNumber
+   - NumberOfDays
+   - RoomChargePerDay
+   Create the following methods:
+   - CalculateRoomCharge()
+   - DisplayHospitalBill()
+6. Calculate the total hospital bill using the following conditions:
+Billing Calculation:
+- Room Charge = NumberOfDays × RoomChargePerDay
+- Doctor Consultation Fee = ₹1000
+- Medicine Charges = ₹2500
+- Total Bill = Room Charge + Consultation Fee + Medicine Charges
+7. Display all personal details, patient details, admission details, and the final hospital bill.
+
+Expected Output:
+
+HOSPITAL MANAGEMENT SYSTEM
+-------------------------
+
+PERSON DETAILS
+Person ID       : 101
+Name            : Ajith Kumar
+Age             : 25
+Gender          : Male
+
+PATIENT DETAILS
+Patient ID      : P101
+Disease         : Fever
+Admission Date  : 01-11-2026
+
+IN-PATIENT DETAILS
+Room Number     : 205
+Number Of Days  : 3
+Room Charge     : 1500
+
+BILL DETAILS
+Room Charge     : 4500
+Consultation Fee: 1000
+Medicine Charges: 2500
+Total Bill      : 8000
+
+----------------------------------------------------------------------------------------------------------
