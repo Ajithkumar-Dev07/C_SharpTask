@@ -55,8 +55,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="C# Task Requirements\Console Application Bus Booking2 .txt" />
     <Content Include="C# Task Requirements\EmployeeMangement.txt" />
     <Content Include="C# Task Requirements\GenericCollection.txt" />
+    <Content Include="C# Task Requirements\Console Application Bus Booking.txt" />
     <Content Include="C# Task Requirements\usingTask.txt" />
     <Content Include="String and StringBuilder Task.txt" />
     <Content Include="Exception Task.txt" />

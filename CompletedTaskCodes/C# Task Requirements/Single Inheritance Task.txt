@@ -1,0 +1,42 @@
+﻿Task 1: Single Inheritance – Employee Salary Management System
+Scenario:
+
+A company wants to develop an Employee Salary Management System. The application should maintain common employee details in a parent class and calculate salary details in a child class.
+
+Requirements:
+1. Create a parent class named Employee.
+2. Declare the following properties:
+   - EmployeeId
+   - EmployeeName
+   - Department
+   - BasicSalary
+3. Create a method named DisplayEmployeeDetails() to display employee information.
+4. Create a child class named PermanentEmployee that inherits from Employee.
+5. Add the following properties in PermanentEmployee:
+   - HRA
+   - DA
+   - PF
+6. Create a method named CalculateNetSalary().
+Salary Calculation:
+- HRA = 20% of Basic Salary
+- DA = 10% of Basic Salary
+- PF = 12% of Basic Salary
+- Net Salary = Basic Salary + HRA + DA - PF
+
+Expected Output:
+Employee Details
+-------------------------
+Employee ID     : 101
+Employee Name   : Ajith
+Department      : Development
+Basic Salary    : 30000
+
+Salary Details
+-------------------------
+HRA             : 6000
+DA              : 3000
+PF              : 3600
+Net Salary      : 35400
+
+-------------------------------------------------------------------------------------------------------------
+
