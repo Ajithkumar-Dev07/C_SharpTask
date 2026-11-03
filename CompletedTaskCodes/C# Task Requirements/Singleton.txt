@@ -1,0 +1,42 @@
+Create a Logger Singleton Class
+
+Create a class named Logger.
+
+Requirements:
+- Implement the Singleton Pattern.
+- The constructor must be private.
+- Create a method named LogMessage().
+- Display application activities with date and time.
+- Support different log levels:
+  - INFO
+  - WARNING
+  - ERROR
+3. Create Multiple Modules
+
+Create the following classes:
+- UserModule
+- EmployeeModule
+- PaymentModule
+Each module should:
+- Access the same ConfigurationManager instance.
+- Access the same Logger instance.
+- Display the company and application details.
+- Log its activities using the Logger class.
+4. Object Reference Validation
+
+In the Main method:
+- Create multiple references to ConfigurationManager.
+- Create multiple references to Logger.
+- Compare their references using ReferenceEquals().
+- Display whether both references point to the same object.
+Example:
+var config1 = ConfigurationManager.Instance;
+var config2 = ConfigurationManager.Instance;
+
+Console.WriteLine(
+    ReferenceEquals(config1, config2)
+);
+
+
+Expected output:
+True
