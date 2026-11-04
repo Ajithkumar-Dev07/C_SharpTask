@@ -1,0 +1,223 @@
+# C# Assignment – Polymorphism (Real-Time Scenarios)
+
+## Topics Covered
+1. Method Overloading (Compile-Time Polymorphism)
+2. Method Overriding (Runtime Polymorphism)
+3. Inheritance
+4. Virtual and Override Keywords
+5. Base Class References
+
+---
+
+# Task 1: Online Food Ordering System
+### Concept: Method Overloading
+
+### Scenario:
+Develop a food ordering system where customers can place orders using different combinations of food items and quantities.
+
+### Requirements:
+
+Create a class called `FoodOrder`.
+
+Implement the following overloaded methods:
+
+1. `PlaceOrder(string itemName)`
+   - Place an order for one food item.
+   - Default quantity should be 1.
+
+2. `PlaceOrder(string itemName, int quantity)`
+   - Place an order for a specific quantity.
+
+3. `PlaceOrder(string itemName, int quantity, string size)`
+   - Place an order with a specified size (Small, Medium, Large).
+
+4. `PlaceOrder(string itemName, int quantity, string size, bool extraCheese)`
+   - Place an order with an option for extra cheese.
+
+### Additional Requirements:
+- Display the item name, quantity, size, and extra cheese option.
+- Validate that quantity must be greater than zero.
+- Use method overloading instead of creating different method names.
+
+### Sample Output:
+
+```text
+Item: Burger
+Quantity: 1
+
+Item: Pizza
+Quantity: 2
+Size: Large
+
+Item: Sandwich
+Quantity: 3
+Size: Medium
+Extra Cheese: Yes
+```
+
+---
+
+# Task 2: Vehicle Rental Management System
+### Concept: Method Overriding
+
+### Scenario:
+Develop a vehicle rental application where different vehicles calculate rental charges differently.
+
+### Requirements:
+
+**Step 1: Create a Base Class**
+
+Create a class called `VehicleRental`.
+
+Properties:
+- VehicleName
+- VehicleNumber
+- RentalDays
+
+Methods:
+- `CalculateRentalAmount()` – Create this as a virtual method.
+- `DisplayVehicleDetails()` – Display vehicle information.
+
+**Step 2: Create Derived Classes**
+
+Create the following classes:
+
+**1. BikeRental**
+- Inherit from VehicleRental.
+- Override `CalculateRentalAmount()`.
+- Rental charge: ₹500 per day.
+
+**2. CarRental**
+- Inherit from VehicleRental.
+- Override `CalculateRentalAmount()`.
+- Rental charge: ₹1500 per day.
+
+**3. BusRental**
+- Inherit from VehicleRental.
+- Override `CalculateRentalAmount()`.
+- Rental charge: ₹3000 per day.
+
+**Step 3: Implement Runtime Polymorphism**
+
+- Create objects for BikeRental, CarRental, and BusRental.
+- Store all objects using a `VehicleRental` reference or collection.
+- Call `CalculateRentalAmount()` for each vehicle.
+- Display the total rental amount.
+
+### Sample Output:
+
+```text
+Vehicle: Honda Activa
+Vehicle Number: TN 74 AB 1234
+Rental Days: 2
+Total Rental Amount: 1000
+
+Vehicle: Hyundai Creta
+Vehicle Number: TN 74 CD 5678
+Rental Days: 3
+Total Rental Amount: 4500
+
+Vehicle: Tourist Bus
+Vehicle Number: TN 74 EF 9012
+Rental Days: 2
+Total Rental Amount: 6000
+```
+
+---
+
+# Task 3: Online Ticket Booking System
+### Concept: Method Overloading + Method Overriding
+
+### Scenario:
+Develop a ticket booking system that supports different ticket booking options and different ticket pricing rules.
+
+### Part A: Method Overloading
+
+Create a class called `TicketBooking`.
+
+Implement the following overloaded methods:
+
+1. `BookTicket(string movieName)`
+   - Book one standard ticket.
+
+2. `BookTicket(string movieName, int numberOfTickets)`
+   - Book multiple tickets.
+
+3. `BookTicket(string movieName, int numberOfTickets, string seatType)`
+   - Book tickets with seat types (Regular, Premium, Recliner).
+
+4. `BookTicket(string movieName, int numberOfTickets, string seatType, bool foodCombo)`
+   - Book tickets with an optional food combo.
+
+### Part B: Method Overriding
+
+Create a base class called `Ticket`.
+
+Properties:
+- MovieName
+- NumberOfTickets
+
+Create a virtual method:
+
+`CalculateTicketPrice()`
+
+Create the following derived classes:
+
+**1. RegularTicket**
+- Override `CalculateTicketPrice()`.
+- Price per ticket: ₹150.
+
+**2. PremiumTicket**
+- Override `CalculateTicketPrice()`.
+- Price per ticket: ₹250.
+
+**3. ReclinerTicket**
+- Override `CalculateTicketPrice()`.
+- Price per ticket: ₹400.
+
+### Part C: Runtime Polymorphism
+
+- Create objects for all three ticket types.
+- Store them in a `List<Ticket>`.
+- Call `CalculateTicketPrice()` using a loop.
+- Display the movie name, ticket count, ticket type, and total price.
+
+### Sample Output:
+
+```text
+Movie: Leo
+Ticket Type: Regular
+Number of Tickets: 2
+Total Price: 300
+
+Movie: Leo
+Ticket Type: Premium
+Number of Tickets: 3
+Total Price: 750
+
+Movie: Leo
+Ticket Type: Recliner
+Number of Tickets: 2
+Total Price: 800
+```
+
+---
+
+## General Instructions
+
+1. Develop all three tasks using a C# Console Application.
+2. Create separate classes wherever required.
+3. Do not write all business logic inside the Main method.
+4. Use method overloading with different parameter combinations.
+5. Use virtual and override keywords appropriately.
+6. Demonstrate runtime polymorphism using base class references.
+7. Use List<T> wherever required.
+8. Validate user inputs wherever applicable.
+
+## Submission Guidelines
+
+- Complete all three tasks.
+- Push the source code to your GitHub repository.
+- Maintain separate folders for each task.
+- Include meaningful class and method names.
+- Submit your GitHub repository link.
