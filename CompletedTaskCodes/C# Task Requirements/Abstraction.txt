@@ -1,0 +1,130 @@
+Task 1: Smart Home Automation System
+Abstract Class
+ Intermediate
+
+Scenario: Develop a Smart Home Automation System where different smart devices have common properties but perform operations differently.
+
+Requirements:
+
+1. Create an abstract class SmartDevice with the following properties:
+  - DeviceId, DeviceName, RoomName, IsConnected.
+2. Create a parameterized constructor to initialize device details.
+
+3. Declare the following abstract methods:
+    - TurnOn()
+    - TurnOff()
+    - GetDeviceStatus()
+4. Create the following concrete methods:
+    - ConnectToNetwork()
+    - DisconnectFromNetwork()
+    - DisplayDeviceInformation()
+5. Create the following derived classes:
+
+SmartLight
+  - Add BrightnessLevel property.
+  - Implement brightness increase/decrease.
+  - Allow brightness between 0 and 100.
+SmartAirConditioner
+  - Add Temperature property.
+  - Allow temperature between 16°C and 30°C.
+  - Implement cooling ON/OFF functionality.
+SmartDoorLock
+  - Add LockStatus property.
+  - Implement Lock and Unlock operations.
+  - Display the current lock status.
+Application Requirements:
+  - Create objects for all three devices.
+  - Store them using List<SmartDevice>.
+  - Perform ON/OFF operations using runtime polymorphism.
+  - Display individual device information and status.
+Concepts: Abstract class, abstract methods, concrete methods, inheritance, overriding, runtime polymorphism.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Task 2: Online Food Delivery Platform
+
+Scenario: Develop an Online Food Delivery Platform that manages customer orders, payments, and notifications using interfaces.
+
+Requirements:
+
+1. Create an interface IOrderManagement with:
+    - PlaceOrder()
+    - CancelOrder()
+    - TrackOrder()
+2. Create an interface IPayment with:
+    - ProcessPayment()
+    - RefundPayment()
+    - GetPaymentStatus()
+3. Create an interface INotification with:
+    - SendNotification()
+    - GetNotificationHistory()
+4. Create the following classes:
+
+FoodOrder
+    - Implement IOrderManagement.
+    - Properties: OrderId, CustomerName, RestaurantName, OrderStatus.
+    - Manage order placement, cancellation, and tracking.
+UpiPayment
+    - Implement IPayment.
+    - Properties: TransactionId, UpiId, PaymentStatus.
+    - Process payments and refunds.
+OrderNotification
+    - Implement INotification.
+    - Properties: NotificationId, Message, NotificationType.
+    - Send notifications and maintain notification history.
+Application Requirements:
+    - Place a food order.
+    - Process payment using UPI.
+    - Send order confirmation notification.
+    - Update and track order status.
+    - Cancel an order and process a refund.
+    - Display payment and notification history.
+    - Access functionalities through interface references.
+Concepts: Interface declaration, implementation, interface references, loose coupling, interface-based programming.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+Task 3: Smart Travel Booking System
+Multiple Inheritance Using Interface
+Scenario: Develop a Travel Booking System that manages flight bookings, hotel reservations, and travel insurance. Use multiple interfaces to provide common functionalities without using multiple class inheritance.
+
+Requirements:
+1. Create the following interfaces:
+   
+   IBookable
+   - BookService()
+   - CancelBooking()
+   - GetBookingDetails()
+   IPayable
+   - MakePayment()
+   - GenerateInvoice()
+   - GetPaymentDetails()
+   IRefundable
+   - ProcessRefund()
+   - GetRefundStatus()
+   INotifiable
+   - SendBookingConfirmation()
+   - SendCancellationNotification()
+2. Create the following classes:
+   
+   FlightBooking
+   - Implement all four interfaces.
+   - Properties: FlightBookingId, PassengerName, Source, Destination, TravelDate, TicketStatus.
+   - Manage flight booking, payment, cancellation, refund, and notifications.
+   HotelBooking
+   - Implement all four interfaces.
+   - Properties: HotelBookingId, GuestName, HotelName, CheckInDate, CheckOutDate, RoomType, BookingStatus.
+   - Manage hotel reservations, payments, cancellation, refunds, and notifications.
+   TravelInsurance
+     - Implement IBookable, IPayable, and INotifiable.
+     - Properties: PolicyId, CustomerName, CoverageType, PolicyDuration, PolicyStatus.
+     - Manage policy purchase, payment, invoice, and confirmation.
+Application Requirements:
+- Create objects for all three classes.
+    - Book a flight and reserve a hotel.
+    - Purchase travel insurance.
+    - Process payments and generate invoices.
+    - Cancel eligible bookings and process refunds.
+    - Display booking and payment details.
+    - Use interface references to access functionalities.
+    - Store different booking objects in an appropriate collection and perform common booking operations.
+Important Condition: Do not create a common parent class for these three classes. Achieve multiple inheritance using interfaces only.
+
+Concepts: Multiple interface implementation, multiple inheritance, interface polymorphism, loose coupling, common contracts.
