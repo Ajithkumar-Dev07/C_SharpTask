@@ -1,1 +1,71 @@
-﻿
+Task 1: Smart Notification Management System (Multicast Delegate)
+Scenario:
+
+A company wants to develop a notification management system to send important updates to its employees through Email, SMS, and Application notifications. Instead of invoking each notification method separately, the system should use a Multicast Delegate to execute multiple notification methods through a single delegate invocation.
+
+Requirements:
+1. Create an Employee class with EmployeeId, EmployeeName, Email, and MobileNumber properties.
+2. Declare a delegate named NotificationDelegate that does not accept any parameters.
+3. Create three notification methods:
+   - SendEmail() – Display an email notification.
+   - SendSMS() – Display an SMS notification.
+   - SendAppNotification() – Display an application notification.
+4. Create an employee object and get employee details from the user.
+5. Assign all three notification methods to the delegate using the += operator.
+6. Invoke the delegate to execute all three methods in sequence.
+7. Allow the user to remove a particular notification method using the -= operator.
+8. Invoke the delegate again and verify that the removed notification method is not executed.
+9. Display the notification methods in the order they are attached.
+Sample Input:
+Enter Employee ID: 101
+Enter Employee Name: Ajith
+Enter Email: ajith@gmail.com
+Enter Mobile Number: 9876543210
+
+Select Notification Options:
+1. All Notifications
+2. Email Only
+3. SMS Only
+4. App Notification Only
+
+Enter Choice: 1
+
+Do you want to remove any notification?
+1. Yes
+2. No
+
+Enter Choice: 1
+Select notification to remove:
+1. Email
+2. SMS
+3. App Notification
+
+Enter Choice: 2
+
+
+Expected Output:
+----- Employee Details -----
+Employee ID: 101
+Employee Name: Ajith
+Email: ajith@gmail.com
+Mobile: 9876543210
+
+----- Sending Notifications -----
+
+Email notification sent successfully!
+SMS notification sent successfully!
+App notification sent successfully!
+
+SMS notification removed successfully!
+
+----- Notifications After Removal -----
+
+Email notification sent successfully!
+App notification sent successfully!
+
+
+Expected Concepts:
+- Delegate declaration and instantiation
+- Multicast delegates
+- += and -= operators
+- Delegate invocation﻿
