@@ -1,0 +1,58 @@
+﻿Task 2: Online Food Delivery System (Callback Delegate)
+Scenario:
+
+An online food delivery application allows customers to place food orders. Once an order is placed, the restaurant prepares the food, and a delivery partner delivers it to the customer. The application must notify the customer whenever the order status changes.
+
+Implement this process using Callback Delegates. The notification method must be passed as a parameter to another method and invoked whenever an order status changes.
+
+Requirements:
+1. Create an Order class with OrderId, CustomerName, FoodName, DeliveryAddress, and OrderAmount properties.
+2. Declare a delegate named OrderStatusCallback that accepts a string parameter.
+3. Create a method named PlaceOrder() that accepts order details and the callback delegate as parameters.
+4. Create a method named UpdateCustomer() to display the order status.
+5. Pass the UpdateCustomer() method as a callback while calling PlaceOrder().
+6. Display the order details after placing the order.
+7. Simulate the following order processing stages:
+   - Order Placed – Restaurant receives the order.
+   - Preparing – Restaurant starts preparing food.
+   - Food Ready – Food preparation is completed.
+   - Out for Delivery – Delivery partner picks up the order.
+   - Delivered – Order successfully reaches the customer.
+8. Invoke the callback delegate after completing each stage to notify the customer.
+9. Use Thread.Sleep() to simulate preparation and delivery delays.
+10. Ensure that the customer notification method is executed through the callback delegate instead of directly calling it.
+Sample Input:
+Enter Order ID: 501
+Enter Customer Name: Ajith
+Enter Food Name: Chicken Biryani
+Enter Delivery Address: Nagercoil
+Enter Order Amount: 250
+
+
+Expected Output:
+----- Order Details -----
+
+Order ID: 501
+Customer Name: Ajith
+Food Name: Chicken Biryani
+Delivery Address: Nagercoil
+Order Amount: Rs.250
+
+----- Order Tracking -----
+
+Notification: Order Placed Successfully!
+Notification: Restaurant Started Preparing Your Food...
+Notification: Your Food Is Ready!
+Notification: Your Order Is Out for Delivery!
+Notification: Your Order Has Been Delivered Successfully!
+
+Thank You for Ordering!
+
+
+Expected Concepts:
+- Delegate declaration and instantiation
+- Callback delegates
+- Passing delegates as method parameters
+- Delegate invocation
+- Method references
+- Thread.Sleep()
